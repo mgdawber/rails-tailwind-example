@@ -7,15 +7,26 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #3A41C6 0%, #512888 100%);
+      }
+    </style>
   </head>
 
   <body>
     <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
+    </p>
   </body>
 </html>
